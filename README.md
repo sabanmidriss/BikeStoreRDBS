@@ -1,7 +1,7 @@
 ---
 
 
-# BIKE STORE RELATIONAL DATABASE ANALYSIS 
+# Bike Store Relational Database Analysis
 
 
 
@@ -10,6 +10,6 @@ In this project, I have analyzed a bike store relational database to demonstrate
 
 
 
-# DESCRIPTION 
+# Description
 
 Throughout my analysis, I explored various aspects, such as identifying the most sold items, determining which store achieved the highest sales, and uncovering the most expensive items, among other insights.
