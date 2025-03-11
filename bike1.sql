@@ -92,3 +92,38 @@ ORDER BY
 
 LIMIT 10;
 
+
+#List all products: Write a query to retrieve all product names and their corresponding brand names. 	
+
+select
+	pp.product_name, pb.brand_name
+
+from 
+	production_brands pb
+
+INNER JOIN production_products pp 
+
+on pb.brand_id=pp.brand_id 
+
+;
+
+
+
+#Orders by customer: Write a query to list the total number of orders placed by each customer.
+
+select * from public.sales_customers
+select * from public.sales_orders_items
+
+select sc.first_name, sc.last_name, COUNT(so.quantity) as qty_ordered
+
+from sales_customers sc
+
+INNER JOIN sales_orders_items so ON sc.customer_id=so.order_id
+
+GROUP by sc.first_name,sc.last_name
+
+ORDER BY qty_ordered DESC
+
+
+
+
