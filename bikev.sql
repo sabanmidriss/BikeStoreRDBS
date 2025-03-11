@@ -1,4 +1,4 @@
-
+***SUMMARY OF ALL TABLE *** 
 
 SELECT * FROM public.sales_orders
 SELECT * FROM public.sales_orders_items
@@ -11,15 +11,15 @@ SELECT * FROM public.production_brands
 SELECT * FROM public.production_categories
 
 
---- Get the number of records
+
+*** Get the number of records *** 
 
 select count(*) from sales_orders;
 
 
+--- ANALYSIS BIKE STORE DATABASE ---
 
--- Order Analysis 
-
--- FIND THE STORE WITH THE MOST SALE ITEMS
+--- FIND THE STORE WITH THE MOST SALE ITEMS ---
 
 
 SELECT ps.store_id,pp.product_name, ps.quantity
@@ -33,7 +33,8 @@ on ps.product_id=pp.product_id
 ORDER BY ps.quantity DESC;
 
 
---- FIND THE store with the most sold items
+--- FIND THE store with the most sold items --- 
+
 
 select ss.store_name, ss.city,ss.state, ps.product_id, ps.quantity
 
@@ -108,7 +109,6 @@ on pb.brand_id=pp.brand_id
 ;
 
 
-
 #Orders by customer: Write a query to list the total number of orders placed by each customer.
 
 select * from public.sales_customers
@@ -120,7 +120,7 @@ from sales_customers sc
 
 INNER JOIN sales_orders_items so ON sc.customer_id=so.order_id
 
-GROUP by sc.first_name,sc.last_name
+GROUP by sc.first_name, sc.last_name
 
 ORDER BY qty_ordered DESC
 
@@ -140,19 +140,6 @@ from
 GROUP BY product_id, quantity,list_price, list_price*discount
 
 Order by product_id ASC;
-
-
-
-
-
-
-
-
-
-
-
-#Total sales per product: Write a query to calculate the total sales amount for each product (considering quantity, list price, and discount).
-
 
 
 
